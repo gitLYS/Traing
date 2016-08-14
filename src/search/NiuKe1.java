@@ -38,49 +38,43 @@ public class NiuKe1 {
 		Scanner sc = new Scanner(System.in);
 		List<Integer> list = new ArrayList<>();
 		int total = sc.nextInt();
+		int[] num = new int[total];
 		while (total-- != 0) {
 			list.add(sc.nextInt());
 		}
 
-		
 		int MINCouple = 1;
-		int maxTotal =1;
+		int maxTotal = 1;
 		int minTotal = 1;
-		
+		int bigger = 1;
+		int less = 1;
+
 		Iterator<Integer> iterator = list.iterator();
 		Iterator<Integer> iterator1 = list.iterator();
+
 		int min = iterator.next();
 		int max = min;
 		iterator1.next();
 		while (iterator.hasNext()) {
-			
-			
-			
-			
 			int j = iterator.next();
-			if(max < j){
+			if (max < j) {
 				max = j;
 				maxTotal = 1;
-			}else if(max == j){
+			} else if (max == j) {
 				maxTotal++;
 			}
-				
-			if(min > j){
+
+			if (min > j) {
 				min = j;
 				minTotal = 1;
-			}else if(min == j){
+			} else if (min == j) {
 				minTotal++;
 			}
 		}
-		
-	
-		MINCouple = minTotal*maxTotal;
+
+		MINCouple = minTotal * maxTotal;
 		System.out.println(MINCouple);
-		
+
 	}
-	
-	
-	
-	
-	
+
 }
